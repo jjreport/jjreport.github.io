@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>#JJANGJJANGMAN</title>
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="semantic-ui/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="semantic-ui/sidebar.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <style>
+        @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+        body,
+        td,
+        a,
+        .ui.button,
+        .item,
+        .ui.header {
+            font-family: 'Jeju Gothic', sans-serif;
+        }
+    </style>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="semantic-ui/semantic.min.js"></script>
+    <script src="semantic-ui/sidebar.min.js"></script>
+    <script src="js/steem.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $.getScript("js/jjreport.js", function() {
+                $("#site_header").load("header.html");
+                $("#site_footer").load("footer.html");
+            });
+
+            $('.ui.sidebar')
+                .sidebar('attach events', '.toc.item');
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div id="site_header"></div>
+
+    <!-- Sidebar Menu -->
+    <div class="ui vertical inverted sidebar menu">
+        <div class="item" style="padding-bottom:0px;">
+            <div class="header">
+                <img class="ui mini circular image" src="images/logo.png" />
+            </div>
+            <!-- <a class="item" href="mystatus.html">나의 정보</a> -->
+            <a class="item" href="dailyreport.html">일간 리포트</a>
+            <a class="item" href="weeklyreport.html">주간 리포트</a>
+        </div>
+    </div>
+
+    <!-- Page Contents -->
+    <div class="pusher" style="background-color: #1b1c1d;">
+
+
+        <div class="ui inverted vertical masthead center aligned segment" style="padding:0.4em 0em 0.4em 0em;">
+            <div class="ui container">
+                <div class="ui large secondary inverted pointing menu">
+                    <a class="toc item">
+              <i class="sidebar icon"></i>
+            </a>
+                    <a href="index.html" class="right header item" style="padding:0px;">
+                <img class="logo" src="images/logo.png" style="margin-right:0.5em;" /> jjangjjangman
+            </a>
+                </div>
+            </div>
+
+
+            <div class="ui text container" style="padding:2em 0em;">
+                <img src="images/logo.png">
+                <h1 class="ui inverted header">
+                    #jjangjjangman
+                </h1>
+
+            </div>
+
+        </div>
+
+        <main>
+
+            <div class="ui vertical stripe segment">
+
+                <div class="ui middle aligned stackable grid container" style="padding-bottom:1.5em;">
+                    <div class="row">
+                        <div class="eight wide column">
+                            <h3 class="ui dividing header">콘텐츠 창작자들을 지원합니다.</h3>
+                            <p><a class="ui horizontal large label">#jjangjjangman</a> 태그를 사용하시면 기본 보팅을 지원합니다.</p><br>
+                            <h3 class="ui dividing header">여러분 모두가 짱짱맨입니다.</h3>
+                            <p>본인이 사용한 것이 아니라도 <a class="ui horizontal large label">#jjangjjangman</a> 태그가 사용된 것이 보이면 조금이라도 보팅을 보태주세요. 양질의 컨텐츠를 공유하기 위한 <a class="ui horizontal large label">#kr</a>의 노력입니다.</p><br>
+                            <h3 class="ui dividing header">태그는 하루에 한 번만 사용해 주세요.</h3>
+                            <p>모두가 공평하게 혜택을 누릴 수 있게끔 도와주세요.</p>
+                        </div>
+                        <div class="six wide right floated column">
+                            <img src="images/main_post.jpg" class="ui large bordered rounded image">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="two wide column">
+                        </div>
+                        <div class="center aligned five wide column">
+                            <a class="ui big orange button" href="https://steemit.com/kr/@virus707/5qw7jg" target="_blank">짱짱맨의 시작 보러가기</a>
+                        </div>
+                        <div class="two wide column">
+                        </div>
+                        <div class="center aligned five wide column">
+                            <a class="ui big orange button" href="https://steemit.com/kr/@virus707/24orv4" target="_blank" md>짱짱맨의 취지 및 배경 보러가기</a>
+                        </div>
+                        <div class="two wide column">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="ui divider"></div> -->
+
+            <div class="ui container center aligned" style="padding-top:1.5em;">
+                <div class="sixteen wide column">
+                    <h1 class="ui header">#JJANGJJANGMAN</h1><br>
+
+                    <table width="100%">
+                        <tr>
+                            <td>
+                                <center><img src="images/avatar_virus707.png" class="ui small circular image"></center>
+                                <br>
+                            </td>
+                            <td>
+                                <center><img src="images/avatar_jungs.png" class="ui small circular image"></center>
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h3><a href="https://steemit.com/@virus707" target="_blank">@virus707</a></h3>
+                            </td>
+                            <td>
+                                <h3><a href="https://steemit.com/@jungs" target="_blank">@jungs</a></h3>
+                        </tr>
+                        <tr>
+                            <td>
+                                기획자
+                            </td>
+                            <td>
+                                봇 개발자
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+            </div>
+
+        </main>
+
+        <div id="site_footer"></div>
+    </div>
+</body>
+
+</html>
