@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>#JJANGJJANGMAN</title>
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="semantic-ui/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="css/billboard.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <style>
+        @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+        body,
+        td,
+        a,
+        .ui.button,
+        .item,
+        .ui.header {
+            font-family: 'Jeju Gothic', sans-serif;
+        }
+    </style>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="semantic-ui/semantic.min.js"></script>
+    <script src="js/steem.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $.getScript("js/curateyou.js", function() {
+                $("#site_header").load("header.html");
+                $("#site_footer").load("footer.html");
+                initPage();
+            });
+
+            $('.ui.sidebar')
+                .sidebar('attach events', '.toc.item');
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <div id="site_header"></div>
+
+    <!-- Sidebar Menu -->
+    <div class="ui vertical inverted sidebar menu">
+        <div class="item" style="padding-bottom:0px;">
+            <div class="header">
+                <img class="ui mini circular image" src="images/logo.png" />
+            </div>
+            <!-- <a class="item" href="mystatus.html">나의 정보</a> -->
+            <a class="item" href="dailyreport.html">일간 리포트</a>
+            <a class="item" href="weeklyreport.html">주간 리포트</a>
+            <a class="item" href="curateyou.html">Curate you!</a>
+        </div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <div class="ui vertical inverted sidebar menu">
+        <div class="item" style="padding-bottom:0px;">
+            <div class="header">
+                <img class="ui mini circular image" src="images/logo.png" />
+            </div>
+            <!-- <a class="item" href="mystatus.html">나의 정보</a> -->
+            <a class="item" href="dailyreport.html">일간 리포트</a>
+            <a class="item" href="weeklyreport.html">주간 리포트</a>
+            <a class="item" href="curateyou.html">Curate you!</a>
+        </div>
+    </div>
+
+    <!-- Page Contents -->
+    <div class="pusher" style="background-color: #1b1c1d;">
+
+
+        <!-- Dimmer -->
+        <div id="wrap_loader" class="ui inverted dimmer">
+            <div class="ui huge text loader">잠시만 기다려 주세요.</div>
+        </div>
+
+        <div class="ui inverted vertical masthead center aligned segment" style="padding:0.4em 0em 0.4em 0em;">
+            <div class="ui container">
+                <div class="ui large secondary inverted pointing menu">
+                    <a class="toc item">
+              <i class="sidebar icon"></i>
+            </a>
+                    <a href="index.html" class="right header item" style="padding:0px;">
+                <img class="logo" src="images/logo.png" style="margin-right:0.5em;" /> jjangjjangman
+            </a>
+                </div>
+            </div>
+
+        </div>
+
+        <main>
+
+            <div class="ui stackable container" style="padding-top: 2em;">
+                <div class="ui inverted segment column">
+                    <h1 class="ui deviding header"><img src="images/logo_icurateyou.jpg" class="ui image big circular">Curate you!</h1>
+                    <p>짱짱맨분들의 큐레이션 활동을 위해 만들어진 페이지 입니다. (<a href="https://steemit.com/@newiz" target="_blank">@newiz</a>님의 멋진 의견!)</p>
+                    <p>아래의 글들을 보여줍니다.</p>
+                    <ul>
+                        <li>명성도 55 이하인 분</li>
+                        <li>작성된지 3시간 이상된 글</li>
+                        <li>보상 1달러 미만</li>
+                    </ul>
+                    <p>2일 내 작성된 글들에 대해서만 보여줍니다.</p>
+                    <p>로딩시간이 굉장히 깁니다. 최대 3분까지 걸릴 수 있습니다.</p>
+                    <p>모바일 보다는 PC로 보시는 것을 추천드립니다.</p>
+                    <div class="ui bottom attached primary button" tabindex="0" onclick="loadDiscussions()">글 목록 가져오기</div>
+                </div>
+            </div>
+
+            <div id="container_tag_table" class="ui container" style="padding-top: 2em;">
+                <div class="column">
+                    <div class="ui top attached header grey segment">
+                        <p class="ui small header">짱짱맨 요청 목록</p>
+                    </div>
+                    <div class="ui bottom attached stacked segment" style="padding:0px;">
+                        <div class="column" style="padding:1.5em;">
+
+                            <table id="need_to_curation_table" class="ui celled striped table">
+
+
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div id="site_footer"></div>
+    </div>
+</body>
+
+</html>
